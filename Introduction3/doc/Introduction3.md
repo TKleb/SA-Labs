@@ -6,12 +6,12 @@ You need to have a debugger installed. For this exercise we focus on GDB for Lin
 (If not done already, please revisit introduction #1.)
 
 ## Goal
+Being able to dynamically reverse engineer a simple binary.
 
 ## Solution
+Please submit the password for the binary.
 
 ## Security Questions
+- When do we use dynamic reversing?
+- What does the XOR instruction do?
 
-## Questions for decisions taken
-- Download of first exe also in this lab?
-- Installation in this Lab for the debuggers?
-- 
