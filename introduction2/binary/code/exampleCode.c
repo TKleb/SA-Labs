@@ -5,8 +5,8 @@ int main() {
     printf("Enter super secret password: ");
     scanf("%s", &password);
 
-    if(!strcmp(password, "NotTheRealPassword")) {
-        printf("NotTheRealFlag");
+    if(!strcmp(password, "NotTheRealFlag")) {
+        printf("Do Something");
     }
 
     return 0;
