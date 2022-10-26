@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 In this exercise you will analyse your first Program to find a password which will "unlock" a program. Here it is simply a hardcoded string which will be compared with the Users Input and if it matches it will just print some text.
 
 Here's the template which was used to create both programs used in this exercise.

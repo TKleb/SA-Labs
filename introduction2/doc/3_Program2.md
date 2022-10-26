@@ -1,4 +1,4 @@
-# Static Analysis without Debug Information
+## Static Analysis without Debug Information
 1. Download the second [program](../binary/release/p2.exe).
 2. Open the Program in IDA.
 3. Use the default settings to Load the new file.

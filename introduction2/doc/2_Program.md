@@ -1,4 +1,4 @@
-# Static Analysis with Debug Information
+## Static Analysis with Debug Information
 1. Download the [program](../binary/release/p1.exe).
 2. Open the Program in IDA. (If you haven't yet installed IDA then visit Introduction #1)
 3. Use the default settings to Load the new file.
