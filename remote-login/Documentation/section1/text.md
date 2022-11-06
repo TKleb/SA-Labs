@@ -4,9 +4,3 @@ Please start the docker service from ```RESSOURCES```. Download the executable a
 - port 1345
 
 Exploit port 1345.
-
-## Flag Format
-- ```UUID```
-
-## Solution
-Please submit the found Flag in order to complete this lab.
