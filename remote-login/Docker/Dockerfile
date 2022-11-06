@@ -7,4 +7,4 @@ RUN apk update && apk add --no-cache socat unit sudo curl python3
 RUN cp /app/server.exe /opt/www && \
     chmod +x /entry.sh /app/server.py
 
-EXPOSE 8080 1345
+EXPOSE 80 1345
