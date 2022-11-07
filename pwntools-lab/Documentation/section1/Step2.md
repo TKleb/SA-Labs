@@ -1,6 +1,6 @@
 # Find the buffersize
 ## Vulnerability
-You can skip ahead to "PWN Checksec" if you found the vulnerability yourself. 
+You can skip ahead to "Installing pwntools" if you found the vulnerability yourself. 
 
 The vulnerable function which is exploitable is: ```scanf()```. The function has a predefined size buffer and using ```%s``` to read the input doesn't check the length of the inputted string. If the user enters a string longer which would exceed the buffer size it would overflow and allows to reach addresses which weren't meant to be reached. 
 
