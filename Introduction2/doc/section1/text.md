@@ -1,6 +1,6 @@
 ## Introduction
 This part will focus on the **static** part of the analysis.
-   ![RE Overview](./images/domainPlaceholder.png)
+   ![RE Overview](../images/Overview.png)
 
 ## Prerequisits
 You need to have need a disassembler installed. For this exercise we focus on IDA.
