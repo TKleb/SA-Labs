@@ -1,3 +1,1 @@
-arguments
-externalFiles
-compilers
+Only Flag is needed: HelloAll
