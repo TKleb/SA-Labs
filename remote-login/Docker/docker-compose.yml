@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  lab:
+    build: .
+    env_file:
+      - flag.env
+    ports:
+      - "80:80"
+      - "1345:1345"
