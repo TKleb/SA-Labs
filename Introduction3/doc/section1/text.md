@@ -10,5 +10,8 @@ You need to have a debugger installed. For this exercise we focus on GDB for Lin
 # Artifacts
 * Please download the artifacts from `RESOURCES`. 
 
-# Goal
+# Task
 You will be able to dynamically reverse engineer a simple binary using GDB or x64dbg.
+
+# Goal
+Find the password that will unlock the binary. 
