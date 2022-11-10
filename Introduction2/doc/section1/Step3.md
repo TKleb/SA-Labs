@@ -1,5 +1,5 @@
-## Static Analysis without Debug Information
-1. Download the second [program](../binary/release/p2.exe).
+# Static Analysis without Debug Information
+1. Please analyse `p2.exe` you have previously downloaded. 
 2. Open the Program in IDA.
 3. Use the default settings to Load the new file.
 4. This time IDA won't find any Debug Information and because of this you won't immediately find yourself in the main function. It just opens the "start" function which contains everything the program will do including the normal setup things C does. This makes finding "main" a challenge itself.

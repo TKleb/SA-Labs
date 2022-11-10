@@ -1,4 +1,4 @@
-## Step 1 - GDB
+# GDB Analysis
 As a first step, we analyze the same binary from the previous excercise - but dynamically.
 
 (Download pwndbg extension for GDB https://github.com/pwndbg/pwndbg)

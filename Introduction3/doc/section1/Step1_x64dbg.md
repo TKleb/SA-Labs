@@ -1,4 +1,4 @@
-## Step 2 - x64dbg
+# x64dbg Analysis
 As a first step, we analyze the same binary from the previous excercise - but dynamically.
 1. Open up your installation folder of x64dbg
 2. Drag and drop p1.exe onto x32dbg.exe located in "x64dbg\release\x32\"

@@ -1,5 +1,5 @@
-## Static Analysis with Debug Information
-1. Download the [program](../binary/release/p1.exe).
+# Static Analysis with Debug Information
+1. Please analyse `p1.exe` you have previously downloaded. 
 2. Open the Program in IDA. (If you haven't yet installed IDA then visit Introduction #1)
 3. Use the default settings to Load the new file.
 4. You will notice that IDA asks now if you want to Load the DWARF debug information. Of course you want to load them and you click yes.
