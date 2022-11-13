@@ -4,7 +4,7 @@
 
 void printFlag(void) {
     char flag[40];
-    FILE *fp = fopen("/flag.txt", "r");
+    FILE *fp = fopen("flag.txt", "r");
     
     if (!fp)
     {

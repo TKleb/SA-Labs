@@ -1,10 +1,17 @@
 FROM hackinglab/alpine-base:3.2.0
 
 LABEL maintainer=<ivan.buetler@hacking-lab.com>
+MAINTAINER Ivan Bütler <ivan.buetler@hacking-lab.com>
 
-COPY root/ /
-RUN apk update && apk add --no-cache socat unit sudo curl python3
-RUN cp /app/server /opt/www && \
-    chmod +x /entry.sh /app/server
+COPY root /
 
-EXPOSE 80 1345
+RUN apk add --no-cache --update \
+    unit \
+    gcc \
+    libc-dev \
+    socat \
+    curl && \
+    rm -rf /var/cache/apk/* && \
+    ls -al / > /ivan && \
+    chown -R root:root /opt/www
+
