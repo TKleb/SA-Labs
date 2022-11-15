@@ -1,14 +1,12 @@
-version: '3.6'
+version: '3.9'
 
 services:
-  e-encoded-file-challenge-hobo:
+  pwntool-lab:
     build: .
-    image: e-encoded-file-challenge:latest
-    hostname: 'hobo'
+    env_file:
+      - 13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn
     ports:
       - "80:80"
       - "1342:1342"
-    volumes:
-      - ./13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn:/goldnugget/13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn
-
+    
 
