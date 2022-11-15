@@ -9,9 +9,9 @@ source /goldnugget/*.gn
 #echo $GOLDNUGGET | cut -c1-32 > /flag.txt
 echo $GOLDNUGGET > /flag.txt
 
-gcc -m32 server.c -o server
+#gcc -m32 server.c -o server
 
-cp server /opt/www
+#cp server /opt/www
 
 ls -al /opt/www
 
