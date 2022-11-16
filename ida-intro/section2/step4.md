@@ -1,5 +1,6 @@
 # Exiting the program
 After analysing a program you want to the exit the program. You will see the following window:
+
 ![](../images/closingProgram.png)
 
-Here you can select the checkbox to not save your IDA Session and keep the folder with the binary tidy. Confirm with OK.
+Here you can select OK to save your IDA Session or use the Checkbox "DON'T SAVE" to not save the IDA Session.
