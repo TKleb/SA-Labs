@@ -12,7 +12,7 @@ info functions
 ```
 Which should give a similar output to
 
-![Functions](../../Images/gdb1.png)
+![Functions](../Images/gdb1.png)
 
 The most important function of them is the main function. You can disassemble it by entering:
 ```sh
@@ -20,7 +20,7 @@ disassemble main
 ```
 This will dump the assembly code of the main function:
 
-![Assembly](../../Images/gdb2.png)
+![Assembly](../Images/gdb2.png)
 
 You can see that the strcmp function is called at address ```0x401176``` (This might be different to your address).
 
@@ -35,20 +35,20 @@ run test
 ```
 and see it hitting the breakpoint:
 
-![Breakpoint](../../Images/gdb3.png)
+![Breakpoint](../Images/gdb3.png)
 
 To see the different registers use the command
 ```sh
 info registers
 ```
 
-![Rgisters](../../Images/gdb4.png)
+![Rgisters](../Images/gdb4.png)
 
 From the assembly, it can be noted that the user input (from the command line arguments) is stored in the rax register. And the strcmp function compares the rax register with the rdx register, which must mean that the rdx register must contain the required string. On examining both the registers (rax, rdx). We get the required input!
 
-![RAX](../../Images/gdb5.png)
+![RAX](../Images/gdb5.png)
 
-![Final](../../Images/gdb6.png)
+![Final](../Images/gdb6.png)
 
 
 
