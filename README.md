@@ -4,8 +4,7 @@
 - All Markdown files (files ending in .md) are capitalized
 - Folders on the top level are capitalized
 - Everything else is not capitalized
-- Words in top level foldernames are separated by an underline "_"
-- Every other file is named in kebab-case (the-name)
+- Every multiword file is named in kebab-case (the-name)
 
 ## Folder Structures
 Each lab has to have a documentation folder. 
