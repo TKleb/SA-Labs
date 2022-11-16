@@ -1,4 +1,4 @@
-# Menu Buttons
+# Menu Tabs
 The tabs menu is located below the menu buttons:
 
 ![Menu Tabs](../images/menu_tabs.png)
