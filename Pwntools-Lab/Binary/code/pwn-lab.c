@@ -22,7 +22,9 @@ void start(void) {
     char buffer[16];
 
     printf("Address of start(): %p\n", start);
-    puts("Enter password to get access:");
+    fflush(stdout);
+    printf("Enter password to get access:");
+    fflush(stdout);
     
     
     scanf("%s", buffer);
@@ -30,6 +32,7 @@ void start(void) {
 
 int main(void) {
     start();
-    puts("Wrong password entered!");
+    printf("Wrong password entered!");
+    fflush(stdout);
     return 0;
 }
