@@ -2,7 +2,7 @@
 
 ls -al / > /ivan2
 
-echo $GOLDNUGGET > flag.txt
+echo $GOLDNUGGET > /flag.txt
 MYUUID=`echo $GOLDNUGGET`
 
 sed -i -e "s/MYUUID/$MYUUID/g" /opt/www/index.html
