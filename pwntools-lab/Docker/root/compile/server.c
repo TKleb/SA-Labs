@@ -4,7 +4,7 @@
 
 void printFlag(void) {
     char flag[40];
-    FILE *fp = fopen("/flag.txt", "r");
+    FILE *fp = fopen("flag.txt", "r");
     
     if (!fp)
     {
@@ -22,7 +22,9 @@ void start(void) {
     char buffer[16];
 
     printf("Address of start(): %p\n", start);
+    fflush(stdout);
     puts("Enter password to get access:");
+    fflush(stdout);
     
     
     scanf("%s", buffer);
@@ -31,5 +33,6 @@ void start(void) {
 int main(void) {
     start();
     puts("Wrong password entered!");
+    fflush(stdout);
     return 0;
 }
