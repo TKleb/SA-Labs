@@ -1,1 +1,0 @@
-This lab should be listed in the mode where steps are optional and opening them results in point deduction.

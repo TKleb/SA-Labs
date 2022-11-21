@@ -1,1 +1,0 @@
-This lab should be listed in the "Training" mode

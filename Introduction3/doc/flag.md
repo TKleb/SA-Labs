@@ -1,1 +1,0 @@
-Solution is a flag: dynamically
