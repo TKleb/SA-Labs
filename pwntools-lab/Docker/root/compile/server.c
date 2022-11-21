@@ -9,14 +9,14 @@ void printFlag() {
 	char buff[FLAG_SIZE];
 	FILE *fp;
 	fp = fopen("/flag.txt", "r");
-    
+    puts("SUCCESS!");
 	if (!fp) {
         perror("/flag.txt");
         return;
     }
     
 	fscanf(fp, "%s", buff);
-	printf("Success! The Flag is: %s \n", buff);
+	printf("The Flag is: %s \n", buff);
 	fflush(stdout);
 }
 
