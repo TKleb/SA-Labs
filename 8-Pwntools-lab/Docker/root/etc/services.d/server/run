@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv sh
+
+/usr/bin/with-contenv /app/server
+echo "starting self-compiled server"
+exec /entry.sh

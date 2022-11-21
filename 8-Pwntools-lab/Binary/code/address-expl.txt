@@ -1,0 +1,16 @@
+start: 0x0000126b
+printFlag: 0x000011ed
+main: 0x000012c4
+
+address_of_start = random_start + 0x0000126b
+address_of_printFlag = random_start + 0x000011ed
+address_of_start = <given>
+
+random_start = address_of_start - 0x0000126b
+random_start = address_of_printFlag - 0x000011ed
+
+<given> - 0x0000126b = address_of_printFlag - 0x000011ed
+
+address_of_printFlag = <given> - 0x0000126b + 0x000011ed
+
+address_of_printFlag = <given> - 126
