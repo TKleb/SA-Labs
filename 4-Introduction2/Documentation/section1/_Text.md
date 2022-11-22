@@ -1,7 +1,7 @@
 # Introduction
 This part will focus on the **static** part of the analysis.
 
-![RE Overview](../images/Overview.png)
+![RE Overview](../images/overview.png)
 
 # Prerequisits
 You need to have need a disassembler installed. For this exercise we focus on IDA.
