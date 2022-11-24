@@ -27,5 +27,43 @@ AAAAAAAAAAAAAAAB  CDEFGHIJKLMNOPQ0
 ```
 But even knowing the other 15 bytes of the ciphertext doesn't allow for an encryption. 
 
-This idea to get the key is called "Byte by Byte"-attack.
+But the key can be found by a "Byte-by-Byte"-attack:
+- Remember the output from the 15 byte long input
+- Send 16 bytes with a known last byte and compare to the previous output
+- Repeat for all possible inputs until one matches the desired output
+- Shorten your "A"-string by one more (14) and add the found out byte to it to have the new 15 byte input
+- repeat
+
+It wouls look like this:
+```
+    Message             Key
+
+AAAAAAAAAAAAAAAB  CDEFGHIJKLMNOPQ0
+       |                 |
+       |                 |
+       v                 v
+---CIPHERTEXT1--  ---CIPHERTEXT2--
+
+============ NEXT ITERATION ============
+    Message             Key
+
+AAAAAAAAAAAAAABC  DEFGHIJKLMNOPQ00
+       |                 |
+       |                 |
+       v                 v
+---CIPHERTEXT1--  ---CIPHERTEXT2--
+
+...
+
+============ LAST ITERATION ============
+    Message             Key
+
+BCDEFGHIJKLMNOPQ  0000000000000000
+       |                 |
+       |                 |
+       v                 v
+---CIPHERTEXT1--  ---CIPHERTEXT2--
+```
+Note that it is not a normal bruteforce attack. A normal bruteforce attack would just try encrypting all possible values of M until it finds such value that C1 == C2. This would result in 256¹⁶ tries. What this attack does is decrypting one byte at a time. So it needs 256 * 16 tries, which is significantly smaller than 256¹⁶.
+
 
