@@ -4,8 +4,10 @@ import re
 from string import printable
 from Crypto.Cipher import AES
 
-elf = ELF("./server")
-p1 = elf.process()
+# elf = ELF("./server")
+# p1 = elf.process()
+p1 = remote("localhost", 1345)
+
 p1.recvuntil(b":")
 
 key = '' 

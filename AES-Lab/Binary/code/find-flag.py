@@ -5,11 +5,13 @@ from base64 import b64decode
 
 key = 'M3g4_S3Cre7_K3y!' # M3g4_S3Cre7_K3y!
 
-elf = ELF('./server')
-p2 = elf.process()
+# elf = ELF('./server')
+# p2 = elf.process()
+p2 = remote("localhost", 1345)
+
 
 p2.sendlineafter(b':\n', b' ' * 16)
 ciphertext = b64decode(p2.recvuntil(b"\n").decode().strip())
 cipher = AES.new(key.encode(), AES.MODE_ECB)
 plaintext = cipher.decrypt(ciphertext)
-print(plaintext)
+print(plaintext[0:32])
