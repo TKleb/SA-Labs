@@ -12,7 +12,6 @@ For the scope of this course, we'll focus on the 8 GPR introduced by x86:
 | ESI  | The source index register. Used as a pointer to a source in stream operations				|
 | EDI  | The destination index register. Used as a pointer to a destination in stream operations 	|
 
-The above order is also the order in which arguments are passed when calling a syscall.
 The listed registers are all 32-bit large. On 64-bit operation systems, the registers start with the letter "R" instead of "E", so for example the 64-bit extension of **eax** is called **rax**.
 
 You may encounter the usage of a 32-bit register when reverse engineering a 64-bit executable. In this case, the program is interacting with just the lower 32 bits of the register and ignores the higher 32 bits. This can also be done with the lower 16 or 8 bits.
