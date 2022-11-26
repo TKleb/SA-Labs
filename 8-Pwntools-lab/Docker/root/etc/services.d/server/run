@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv sh
+
+ls -al / > /ivan1
+
+echo "starting self-compiled server"
+export PASSWORD=$(dd if=/dev/urandom count=1 | sha1sum | cut -c5-20)
+exec /usr/bin/socat TCP4-LISTEN:1342,fork,reuseaddr EXEC:/compile/server\ /flag.txt
