@@ -5,8 +5,8 @@ from Crypto.Cipher import AES
 from base64 import b64encode
 
 blocksize = 16 
-flag = open('/app/flag.txt', 'rb').read().strip()
-key = open('/app/key.txt', 'r').read().strip().encode()
+flag = open('/flag.txt', 'rb').read().strip()
+key = open('/key.txt', 'r').read().strip().encode()
 
 def encrypt(plaintext):
     cipher = AES.new(key, AES.MODE_ECB)

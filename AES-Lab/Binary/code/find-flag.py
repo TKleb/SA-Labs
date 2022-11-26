@@ -3,7 +3,7 @@ from pwn import *
 from Crypto.Cipher import AES
 from base64 import b64decode
 
-key = 'M3g4_S3Cre7_K3y!'
+key = '4a-4eca-9ee9-b16'
 
 p2 = remote("localhost", 1345)
 
