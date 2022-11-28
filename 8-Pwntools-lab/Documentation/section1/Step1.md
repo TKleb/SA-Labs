@@ -1,4 +1,5 @@
 # Find a way to exploit the program
+Connect to localhost and download the binary to inspect it. \
 When you open the binary in IDA and wait for the initial analyzation youll see the main function displayed, which you can verify by checking for familiar strings ("Wrong password entered"):
 
 ![Main Function](../images/main-function.png)

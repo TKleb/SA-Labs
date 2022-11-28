@@ -1,9 +1,14 @@
-version: "3.9"
+version: '3.9'
+
 services:
-  lab:
+  pwntool-lab:
     build: .
     env_file:
-      - flag.env
+      - 13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn
     ports:
       - "80:80"
       - "1345:1345"
+    volumes:
+      - ./13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn:/goldnugget/13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn
+    
+

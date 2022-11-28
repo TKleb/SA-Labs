@@ -3,7 +3,7 @@
 You will learn how to use the tools it provides to exploit a program and find the hidden flag. \
 Start the service from ```RESOURCES``. The docker is offering two ports (web and socket port). 
 - port 80
-- port 1345
+- port 1342
 
 Try to find a way to exploit port 1345 using ```pwntools```.
 
