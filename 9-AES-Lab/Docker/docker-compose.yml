@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  lab:
+    build: .
+    env_file:
+      - 4fbc5d17-663f-4360-88c3-a8f8c745ec37.env
+    ports:
+      - "80:80"
+      - "1345:1345"
