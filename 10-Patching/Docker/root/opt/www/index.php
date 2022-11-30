@@ -15,6 +15,11 @@
             . "12 - 4 = " . shell_exec("/app/patched 12 - 4") 
             . "3 * 8 = " . shell_exec("/app/patched 3 \* 8") 
             . "27 / 3 = " . shell_exec("/app/patched 27 / 3");
+
+            if (shell_exec("/app/patched 5 - 3") == 2 && shell_exec("/app/patched 10 - 3") == 7) {
+              echo "You successfully fixed the binary: Here's your Flag: " . shell_exec("printenv GOLDNUGGET");
+            }
+            
       ?>
     </code>
     <br>

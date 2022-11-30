@@ -17,7 +17,7 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-    shell_exec("cat ./uploads/patchfile | dd conv=notrunc of=/app/patched bs=1 seek=$((0x13F2))");
+    shell_exec("cat ./uploads/patchfile | dd conv=notrunc of=/app/patched bs=1 seek=$((0x4E5E))");
     echo "Patchfile has been successfully uploaded and calculator has been patched";
   } else {
     echo "Sorry, there was an error uploading your file.";
