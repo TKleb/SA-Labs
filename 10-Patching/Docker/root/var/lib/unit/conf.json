@@ -6,18 +6,14 @@
 				"file": "/opt/www/php.ini"
 			},
 			"targets": {
-                "front": {
-                    "script": "index.php",
-                    "root": "/opt/www/"
-                },
-                "back": {
-                    "script": "upload.php",
-                    "root": "/opt/www/"
-                },
-				"reset": {
-                    "script": "reset.php",
-                    "root": "/opt/www/"
-                }
+				"front": {
+					"script": "index.php",
+					"root": "/opt/www/"
+				},
+                "functions": {
+					"script": "functions.php",
+					"root": "/opt/www/"
+				}
             }
 		}
 	},
@@ -27,23 +23,6 @@
 		}
 	},
 	"routes": [
-        {
-            "match": {
-                "uri": "/upload",
-				"method": "post"
-            },
-            "action": {
-                "pass": "applications/php/back"
-            }
-        },
-		{
-            "match": {
-                "uri": "/reset"
-            },
-            "action": {
-                "pass": "applications/php/reset"
-            }
-        },
 		{
 			"match": {
 				"uri": "/main.css"
@@ -52,11 +31,11 @@
 				"share": "/opt/www"
 			}
 		},
-        {
-            "action": {
-                "pass": "applications/php/front"
-            }
-        }
-    ]
+		{
+			"action": {
+				"pass": "applications/php/front"
+			}
+		}
+	]
 }
 

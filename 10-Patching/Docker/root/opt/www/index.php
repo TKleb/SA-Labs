@@ -1,35 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Patching Challenge</title>
-    <link rel="stylesheet" href="main.css" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>RE Labs - Remote Login</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
   </head>
   <body>
-    <code>
-      <?php echo  
-            "5 + 3 = " . shell_exec("/app/patched 5 + 3") 
-            . "12 - 4 = " . shell_exec("/app/patched 12 - 4") 
-            . "3 * 8 = " . shell_exec("/app/patched 3 \* 8") 
-            . "27 / 3 = " . shell_exec("/app/patched 27 / 3");
+	<div class="main_page">
+    	<div class="content_section floating_element">
+			<div class="section_header">
+				<h1>Welcome to the Patching Lab</h1>
+	  			<a href="calculator">Executable for analysis</a><br><br><br><br>
+				Find out where the bug is and upload a patch for it in order to get the flag.<br>
+			</div>
+			<div class="section_header">
+				<h2>Patching Area</h2>
+				<form method="post" enctype="multipart/form-data">
+					Select patchfile to patch:
+					<input type="file" name="fileToUpload" id="fileToUpload">
+					<button type="submit" name="uploadAndPatch" value="Upload Image">Patch</button>
+				</form>
 
-            if (shell_exec("/app/patched 5 - 3") == 2 && shell_exec("/app/patched 10 - 3") == 7) {
-              echo "You successfully fixed the binary: Here's your Flag: " . shell_exec("printenv GOLDNUGGET");
-            }
-            
-      ?>
-    </code>
-    <br>
-    <form action="/upload" method="post" enctype="multipart/form-data">
-      Select patchfile to patch:
-      <input type="file" name="fileToUpload" id="fileToUpload">
-      <button type="submit" value="Upload Image">Patch</button>
-    </form>
-    <form action="/reset" method="get">
-      <button type="submit" value="Reset Calculator">Reset Calculator</button>
-    </form>
+				<form method="post">
+					<button type="submit" name="reset" value="Reset Calculator">Reset Calculator</button>
+					<button type="submit" name="getFlag" value="Get Flag">Get Flag</button>
+				</form>
+			</div>
+		</div>
+    </div>
   </body>
 </html>
+
+<?php
+require "functions.php";
+        if (array_key_exists('uploadAndPatch', $_POST)) {
+            uploadAndPatch();
+        } else if (array_key_exists('reset', $_POST)) {
+            resetBinary();
+        } else if (array_key_exists('getFlag', $_POST)) {
+            getFlag();
+        } 
+?>
