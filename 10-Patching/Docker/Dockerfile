@@ -9,7 +9,7 @@ RUN apk fetch unit-php*
 RUN apk add --no-cache unit-php*
 
 RUN cp /app/calculator /app/patched && \
-    chmod +x /app/patched
+    chmod 777 /app/patched
 
 RUN chmod 777 /opt/www/uploads
 RUN mkdir /usr/tmp/
