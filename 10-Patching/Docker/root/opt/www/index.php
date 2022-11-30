@@ -11,17 +11,20 @@
   <body>
     <code>
         <?php 
-            echo shell_exec("ls ./uploads");
+            echo  "5 + 3 = " . shell_exec("/app/patched 5 + 3") . "
+12 - 4 = " . shell_exec("/app/patched 12 - 4") . "
+3 * 8 = " . shell_exec("/app/patched 3 * 8") . "
+27 / 9 = " . shell_exec("/app/patched 27 / 3");
         ?>
     </code>
     <br>
-    <button>Patch</button>
-    <button>Execute</button>
-    <br>
     <form action="/upload" method="post" enctype="multipart/form-data">
-      Select image to upload:
+      Select patchfile to patch:
       <input type="file" name="fileToUpload" id="fileToUpload">
-      <button type="submit" value="Upload Image">Submit</button>
+      <button type="submit" value="Upload Image">Patch</button>
+    </form>
+    <form action="/reset" method="get">
+      <button type="submit" value="Reset Calculator">Reset Calculator</button>
     </form>
   </body>
 </html>

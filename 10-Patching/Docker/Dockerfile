@@ -8,8 +8,8 @@ RUN apk update && apk add --no-cache socat unit sudo curl python3
 RUN apk fetch unit-php*
 RUN apk add --no-cache unit-php*
 
-RUN cp /app/server.exe /opt/www && \
-    chmod +x /entry.sh /app/server.py
+RUN cp /app/calculator /app/patched && \
+    chmod +x /app/patched
 
 RUN chmod 777 /opt/www/uploads
 RUN mkdir /usr/tmp/

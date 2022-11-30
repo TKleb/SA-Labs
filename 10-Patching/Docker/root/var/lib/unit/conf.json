@@ -10,9 +10,12 @@
                     "script": "index.php",
                     "root": "/opt/www/"
                 },
-
                 "back": {
                     "script": "upload.php",
+                    "root": "/opt/www/"
+                },
+				"reset": {
+                    "script": "reset.php",
                     "root": "/opt/www/"
                 }
             }
@@ -31,6 +34,14 @@
             },
             "action": {
                 "pass": "applications/php/back"
+            }
+        },
+		{
+            "match": {
+                "uri": "/reset"
+            },
+            "action": {
+                "pass": "applications/php/reset"
             }
         },
 		{
