@@ -1,15 +1,13 @@
 # Introduction
-This is a simple reverse engineering challenge. Please start the vulnerable service from `RESOURCES`. The vulnerable service is offering two ports.
-- port **1345** (vulnerable service)
-- port **80** (download server binary)
+IMAGE
+This lab showcases another facet of reverse engineering, binary patching. This means, manipulating the binary by changing instructions to change its behaviour.
+
+Please start the service from `RESOURCES` and visit its website.
 
 # Task
-* analyze server binary 
-* exploit the remote service on port `1345`
-* disclose the flag from the remote service
+* analyze calculator binary 
+* find out what bug it contains
+* patch the bug and upload patch
 
 # Artifacts
-* please download the server binary from the vulnerable service on port `80`
-
-# Hint
-* by analyzing the server binary you will find out the built-in vulnerability
+* please download the calculator binary from the web service on port `80`

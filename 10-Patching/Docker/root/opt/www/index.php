@@ -9,12 +9,12 @@
 	<div class="main_page">
     	<div class="content_section floating_element">
 			<div class="section_header">
-				<h1>Welcome to the Patching Lab</h1>
-	  			<a href="calculator">Executable for analysis</a><br><br><br><br>
+				<h1>Welcome to the Patching Lab</h1><br>
+	  			<a href="calculator">Executable for analysis</a><br>
 				Find out where the bug is and upload a patch for it in order to get the flag.<br>
 			</div>
 			<div class="section_header">
-				<h2>Patching Area</h2>
+				<h2>Patching Area</h2><br>
 				<form method="post" enctype="multipart/form-data">
 					Select patchfile to patch:
 					<input type="file" name="fileToUpload" id="fileToUpload">
