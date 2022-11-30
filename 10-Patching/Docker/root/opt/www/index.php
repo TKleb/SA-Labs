@@ -10,12 +10,12 @@
   </head>
   <body>
     <code>
-        <?php 
-            echo  "5 + 3 = " . shell_exec("/app/patched 5 + 3") . "
-12 - 4 = " . shell_exec("/app/patched 12 - 4") . "
-3 * 8 = " . shell_exec("/app/patched 3 * 8") . "
-27 / 9 = " . shell_exec("/app/patched 27 / 3");
-        ?>
+      <?php echo  
+            "5 + 3 = " . shell_exec("/app/patched 5 + 3") 
+            . "12 - 4 = " . shell_exec("/app/patched 12 - 4") 
+            . "3 * 8 = " . shell_exec("/app/patched 3 \* 8") 
+            . "27 / 3 = " . shell_exec("/app/patched 27 / 3");
+      ?>
     </code>
     <br>
     <form action="/upload" method="post" enctype="multipart/form-data">

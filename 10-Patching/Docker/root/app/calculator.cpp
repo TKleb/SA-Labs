@@ -37,9 +37,9 @@ int main(int argc, char** argv) {
 	case '/':
 		result = num1 / num2;
 		break;
-	
+
 	default:
-	std::cout << "Invalid opeartor\n";
+	std::cout << "Invalid operator\n";
 		break;
 	}
 
