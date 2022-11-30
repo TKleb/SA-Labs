@@ -5,7 +5,7 @@ This is a simple reverse engineering challenge. Please start the vulnerable serv
 
 # Task
 * analyze server binary 
-* exploit the remote service on port `1345`
+* exploit the remote service on port `1345` (connect with netcat)
 * disclose the flag from the remote service
 
 # Artifacts

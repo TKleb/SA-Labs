@@ -7,6 +7,9 @@ Start the service from ```RESOURCES``. The docker is offering two ports (web and
 
 Try to find a way to exploit port 1345 using ```pwntools```.
 
+# Artifacts
+* please download the server binary from the vulnerable service on port `80`
+
 # Goals
 - Find the weakness of the running programm
 - Exploit it using pwntools
