@@ -1,0 +1,28 @@
+body, html {
+  padding: 3px 3px 3px 3px;
+  font-family: verdana, sans-serif;
+  background: #2B3139;
+  color: #DDDDDD;
+
+  font-size: 11pt;
+  text-align: center;
+}
+
+code {
+  border: 1px solid black;
+  display: block;
+  height: 200px;
+  width: 500px;
+  margin: 0px auto;
+}
+
+button {
+  background-color: grey;
+  height: 50px;
+  width: 200px;
+}
+
+input {
+  height: 200px;
+  width: 200px;
+}

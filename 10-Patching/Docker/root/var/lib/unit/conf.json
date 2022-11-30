@@ -1,0 +1,51 @@
+{
+	"applications": {
+		"php": {
+			"type": "php",
+			"options": {
+				"file": "/opt/www/php.ini"
+			},
+			"targets": {
+                "front": {
+                    "script": "index.php",
+                    "root": "/opt/www/"
+                },
+
+                "back": {
+                    "script": "upload.php",
+                    "root": "/opt/www/"
+                }
+            }
+		}
+	},
+	"listeners": {
+		"*:80": {
+			"pass": "routes"
+		}
+	},
+	"routes": [
+        {
+            "match": {
+                "uri": "/upload",
+				"method": "post"
+            },
+            "action": {
+                "pass": "applications/php/back"
+            }
+        },
+		{
+			"match": {
+				"uri": "/main.css"
+			},
+			"action": {
+				"share": "/opt/www"
+			}
+		},
+        {
+            "action": {
+                "pass": "applications/php/front"
+            }
+        }
+    ]
+}
+
