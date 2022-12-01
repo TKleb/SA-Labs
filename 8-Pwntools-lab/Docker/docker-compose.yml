@@ -4,11 +4,11 @@ services:
   pwntool-lab:
     build: .
     env_file:
-      - 13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn
+      - 59bb743e-31db-4322-a237-5144f56d55fc.env
     ports:
       - "80:80"
       - "1345:1345"
     volumes:
-      - ./13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn:/goldnugget/13ccdd05-76f9-4b5c-9e7b-7b49483a6aa0.gn
+      - ./59bb743e-31db-4322-a237-5144f56d55fc.gn:/goldnugget/59bb743e-31db-4322-a237-5144f56d55fc.gn
     
 
