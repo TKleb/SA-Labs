@@ -13,6 +13,7 @@
 	  			<a href="calculator">Executable for analysis</a><br>
 				Find out where the bug is and upload a patch for it in order to get the flag.<br>
 			</div>
+			<br>
 			<div class="section_header">
 				<h2>Patching Area</h2><br>
 				<form method="post" enctype="multipart/form-data">
@@ -20,7 +21,7 @@
 					<input type="file" name="fileToUpload" id="fileToUpload">
 					<button type="submit" name="uploadAndPatch" value="Upload Image">Patch</button>
 				</form>
-
+				<br>
 				<form method="post">
 					<button type="submit" name="reset" value="Reset Calculator">Reset Calculator</button>
 					<button type="submit" name="getFlag" value="Get Flag">Get Flag</button>

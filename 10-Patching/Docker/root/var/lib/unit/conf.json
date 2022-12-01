@@ -2,9 +2,6 @@
 	"applications": {
 		"php": {
 			"type": "php",
-			"options": {
-				"file": "/opt/www/php.ini"
-			},
 			"targets": {
 				"front": {
 					"script": "index.php",
@@ -29,6 +26,14 @@
 			},
 			"action": {
 				"share": "/opt/www"
+			}
+		},
+		{
+			"match": {
+				"uri": "/calculator"
+			},
+			"action": {
+				"share": "/app"
 			}
 		},
 		{
