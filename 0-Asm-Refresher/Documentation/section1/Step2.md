@@ -22,3 +22,6 @@ The following list gives an overview of the assembly instructions you'll encount
 | jz             | Jump to label if bits were not set (if **z**ero)                                          |
 | jnz            | Jump to label if bits were set (if **n**ot **z**ero)                                      |
 | nop            | No-op (no operation)                                                                      |
+
+References for further study: [Intel x86 instructions](https://scadahacker.com/library/Documents/Cheat_Sheets/Programming%20-%20x86%20Instructions%201.pdf), 
+[x64 Cheat Sheet](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf)
