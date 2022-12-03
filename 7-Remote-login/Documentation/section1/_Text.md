@@ -1,4 +1,6 @@
 # Introduction
+![RE Overview](../images/overview.png)
+
 This is a simple reverse engineering challenge. Please start the vulnerable service from `RESOURCES`. The vulnerable service is offering two ports.
 - port **1345** (vulnerable service)
 - port **80** (download server binary)

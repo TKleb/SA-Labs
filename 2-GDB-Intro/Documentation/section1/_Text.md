@@ -1,4 +1,6 @@
 # Introduciton
+![](../images/RE_Domain_Dark_gdb.png)
+
 GNU Debugger, which is also called gdb, is the most popular debugger for UNIX systems to debug C and C++ programs. It's important for a reverse engineer to know at least the basics of this program. In future labs you will have more to do with GDB. 
 
 # Goal
