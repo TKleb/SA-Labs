@@ -18,8 +18,7 @@
 	}
 
 	function resetBinary() {
-		shell_exec("cp -f /app/calculator_template /app/calculator_target");
-		shell_exec("chmod +x /app/calculator_target");
+		shell_exec("rm /app/calculator_patched");
 		echo "Binary reset successfully!";
 	}
 
