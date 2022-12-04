@@ -30,7 +30,7 @@
 		},
 		{
 			"match": {
-				"uri": "/calculator"
+				"uri": "/calculator_template"
 			},
 			"action": {
 				"share": "/app"

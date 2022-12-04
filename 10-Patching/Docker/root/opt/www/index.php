@@ -10,7 +10,7 @@
     	<div class="content_section floating_element">
 			<div class="section_header">
 				<h1>Welcome to the Patching Lab</h1><br>
-	  			<a href="calculator">Executable for analysis</a><br>
+	  			<a href="calculator_template">Executable for analysis</a><br>
 				Find out where the bug is and upload a patch for it in order to get the flag.<br>
 			</div>
 			<br>

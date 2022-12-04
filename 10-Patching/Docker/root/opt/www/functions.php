@@ -13,17 +13,18 @@
 			return;
 		}
 
-		shell_exec("xdelta3 -d -s /app/calculator_target /opt/www/uploads/patchfile /app/calculator_patched");
+		shell_exec("xdelta3 -d -f -s /app/calculator_template /opt/www/uploads/patchfile /opt/www/uploads/calculator_patched");
+		shell_exec("chmod +x /opt/www/uploads/calculator_patched");
 		echo "Patchfile has been successfully uploaded and calculator has been patched";
 	}
 
 	function resetBinary() {
-		shell_exec("rm /app/calculator_patched");
+		shell_exec("rm /opt/www/uploads/calculator_patched");
 		echo "Binary reset successfully!";
 	}
 
 	function getFlag() {
-		if (shell_exec("/app/calculator_patched 5 - 3") == 2 && shell_exec("/app/calculator_patched 10 - 3") == 7) {
+		if (shell_exec("/opt/www/uploads/calculator_patched 5 - 3") == 2 && shell_exec("/opt/www/uploads/calculator_patched 10 - 3") == 7) {
 			echo "You successfully fixed the binary: Here's your Flag: " . shell_exec("printenv GOLDNUGGET");
 			return;
 		}
