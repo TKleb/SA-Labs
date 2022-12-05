@@ -3,7 +3,7 @@ Know that the output and how its built is clear, it is time to crack the cipher 
 
 For simplicity, we assume that both the message (input) and the key are of one block length (The attack applies for smaller and bigger keys too). The script takes both and appends the key to the message then encrypts it.
 For the explanation a string consisting of 16 "A"s is used:
-```
+```sh
     Message             Key
 
 AAAAAAAAAAAAAAAA  BCDEFGHIJKLMNOPQ
@@ -16,7 +16,7 @@ This means that ciphertext 1 is known since it results from the input which can 
 
 But what happens when the inputted message is 1 byte shorter?\
 Since the script appends the key to the message, the first byte of the key will be in ciphertext 1 and a 0-padding will be added to the ciphertext 2.
-```
+```sh
     Message             Key
 
 AAAAAAAAAAAAAAAB  CDEFGHIJKLMNOPQ0
@@ -35,7 +35,7 @@ But the key can be found by a "Byte-by-Byte"-attack:
 - repeat
 
 It wouls look like this:
-```
+```sh
     Message             Key
 
 AAAAAAAAAAAAAAAB  CDEFGHIJKLMNOPQ0
