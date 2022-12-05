@@ -23,21 +23,36 @@ Now youre ready to exploit!
 ## Find the buffersize
 Finding the buffersize can be done by bruteforcing it with string which is increased each iteration. Pwntools has some tools to make it more interesting. Check out the [documentation](https://docs.pwntools.com/en/stable/commandline.html) for an overview of Command-Line Tools.
 
-Start by generating a string using ```pwn cyclic 30```. This returns you a the first 30 characters of a predefined string. This is useful for finding out the buffer size since a certain response can be looked up.
+Start by generating a string using 
+```sh
+pwn cyclic 30
+``` 
+This returns you a the first 30 characters of a predefined string. This is useful for finding out the buffer size since a certain response can be looked up.
 
-echo the string into the binary with ```echo "<cyclic_string>" | ./<file_name>```.
+echo the string into the binary with 
+```sh
+echo "<cyclic_string>" | ./<file_name>
+```
 
-You will get a Segmentation Fault which you can check with ```sudo dmesg | tail``` (Prints the tail of the message buffer of the kernel). You will see a message similar to "segfault at --XXXX". 
+You will get a Segmentation Fault which you can check with 
+```sh
+sudo dmesg | tail
+``` 
+(Prints the tail of the message buffer of the kernel). You will see a message similar to "segfault at --XXXX". 
 
 Cyclic can only interpret 32 Bit input which is why you take the last 4 Bytes shown. 
 
-Enter ```pwn cyclic -l 0x<XXXX>``` into your terminal to get the buffer size (should be 24). This command looks up the value you gave it in the predefined string. 
+Enter 
+```sh
+pwn cyclic -l 0x<XXXX>
+``` 
+into your terminal to get the buffer size (should be 24). This command looks up the value you gave it in the predefined string. 
 
 To confirm the size you can use python:
 ```sh
 python -c "print('A'*<buffersize>+'CAFEFE')" | ./server
 ``` 
-Reading the kernel messages again shows you that the program tried to reach the address "FEFEAC", confirming the buffersize.
+Reading the kernel messages again shows you that the program tried to reach the address "FEFECA", confirming the buffersize.
 
 
 
