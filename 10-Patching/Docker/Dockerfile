@@ -8,7 +8,7 @@ RUN apk update && apk add --no-cache socat unit sudo curl python3 xdelta3
 RUN apk fetch unit-php*
 RUN apk add --no-cache unit-php*
 
-RUN chmod 777 /opt/www/uploads
-RUN mkdir /usr/tmp/
+RUN exec chown -R unit /opt/www/uploads
+RUN exec chmod 300 /opt/www/uploads
 
 EXPOSE 80
