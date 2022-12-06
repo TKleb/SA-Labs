@@ -1,0 +1,46 @@
+{
+	"applications": {
+		"php": {
+			"type": "php",
+			"targets": {
+				"front": {
+					"script": "index.php",
+					"root": "/opt/www/"
+				},
+                "functions": {
+					"script": "functions.php",
+					"root": "/opt/www/"
+				}
+            }
+		}
+	},
+	"listeners": {
+		"*:80": {
+			"pass": "routes"
+		}
+	},
+	"routes": [
+		{
+			"match": {
+				"uri": "/main.css"
+			},
+			"action": {
+				"share": "/opt/www"
+			}
+		},
+		{
+			"match": {
+				"uri": "/calculator_template"
+			},
+			"action": {
+				"share": "/app"
+			}
+		},
+		{
+			"action": {
+				"pass": "applications/php/front"
+			}
+		}
+	]
+}
+

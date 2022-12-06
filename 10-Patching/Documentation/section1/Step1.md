@@ -1,0 +1,2 @@
+# Find the bug
+Please try to find the bug in the bninary yourself. In order to download it, start up the docker from the `RESSOURCES` and download it from the provided web interface. After downloading, start it on a Linux system and explore its functionality.
