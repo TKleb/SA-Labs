@@ -3,6 +3,6 @@ services:
   lab:
     build: .
     env_file:
-      - 1bd2b187-5960-41c0-b698-9ea55e13a9e5.env
+      - 29f10e32-ab50-4172-9ee6-c3eb8f445402.env
     ports:
       - "80:80"
