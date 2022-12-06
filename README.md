@@ -51,5 +51,17 @@ Additional Folder can be created if needed
 │   ├── code
 │   └── release
 └── Additional_Folders (opional)
-
 ```
+
+## Feedback Forms
+* IDA: https://forms.gle/PLGG2UbDaVoa3XuWA
+* GDB: https://forms.gle/FqCG22EWZHYmEKsPA
+* x64dbg: https://forms.gle/PgTWPRYcSgoefoDf6
+* Refresher: https://forms.gle/twEzbenwKFrzrG2h8
+* Static Debugging: https://forms.gle/saqM6yMVCyDuBf589
+* Dynamic Debugging: https://forms.gle/UhA44Vq75Z8L4aJd8
+* First RE Attempts: https://forms.gle/uUAPAR4PQK5c5e496
+* Remote Login: https://forms.gle/V2iQNSG1W1qz81gm7
+* Pwntools: https://forms.gle/dF3kuz93r2Ty7R2R6
+* AES: https://forms.gle/SRXygWjwHVsz9y9fA
+* Patching: https://forms.gle/SuHPL36W3KLveid19

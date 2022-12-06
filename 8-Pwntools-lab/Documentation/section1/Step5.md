@@ -16,7 +16,7 @@ Running the finished programm should show the "SUCCESS!" message.
 ## Remote
 The message shows that the script is working and reaches the printFlag() function. Now, make it connect to the remote docker instance which is running by modifing the code:
 
-The only thing that needs to be changed is the process variable. Now instead of a local file the script has to make a remote connection to localhost on port 1342. For this, instead of running the process as an elf instance, remote is used.
+The only thing that needs to be changed is the process variable. Now instead of a local file the script has to make a remote connection to the docker IP address on port 1345. For this, instead of running the process as an elf instance, remote is used.
 
 ![Remote](../images/python-1.6.png)
 
