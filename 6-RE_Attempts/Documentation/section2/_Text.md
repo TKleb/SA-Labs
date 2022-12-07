@@ -1,6 +1,6 @@
 ## Security Questions
-- Why does the Assembler Code have so many differences?
-- How do Program Arguments work?
+- Why does the assembler code have so many differences?
+- How do program arguments work?
 
 ## Solution
-Combined flag from the C++ file and the tinyC File.
+Combined flag from the C++ file and the tinyC file.
