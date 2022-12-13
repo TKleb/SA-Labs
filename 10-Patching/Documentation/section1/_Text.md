@@ -1,5 +1,5 @@
 # Introduction
-IMAGE
+![Overview](../images/overview.png)
 This lab showcases another facet of reverse engineering, binary patching. This means, manipulating the binary by changing instructions to change its behaviour.
 
 Please start the service from `RESOURCES` and visit its website.
