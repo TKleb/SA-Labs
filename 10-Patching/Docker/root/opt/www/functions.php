@@ -25,7 +25,7 @@
 
 	function getFlag() {
 		if (shell_exec("/opt/www/uploads/calculator_patched 5 - 3") == 2 && shell_exec("/opt/www/uploads/calculator_patched 10 - 3") == 7) {
-			echo "You successfully fixed the binary: Here's your Flag: " . shell_exec("printenv GOLDNUGGET");
+			echo "You successfully fixed the binary: Here's your Flag: " . getenv("GOLDNUGGET");
 			return;
 		}
 		echo "The binary is not functioning as intended, please try patching it again.";
